@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "testwithcfb146addb": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
