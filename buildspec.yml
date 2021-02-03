@@ -1,15 +1,24 @@
 version: 0.2
 phases:
-  preBuild:
-    commands:
-      - npm ci
-  build:
-    commands:
-      - npm run build
-artifacts:
-  baseDirectory: build
-  files:
-    - '**/*'
-cache:
-  paths:
-    - node_modules/**/*
+ install:
+   commands:
+   - echo INSTALL started on `date`
+   - echo INSTALL completed on `date`
+ pre_build:
+   commands:
+     - echo PRE_BUILD started on `date`
+     - echo pwd
+     - npm ci
+     - echo PRE_BUILD completed on `date`
+ build:
+   commands:
+     - echo BUILD started on `date`
+     - echo `pwd`
+     - pwd
+     - npm run build
+     - echo BUILD completed on `date`
+ post_build:
+   commands:
+     - echo POST_BUILD started on `date`
+     - echo `pwd`
+     - echo POST_BUILD completed on `date`
