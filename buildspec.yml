@@ -15,7 +15,6 @@ phases:
      - echo BUILD started on `date`
      - echo `pwd`
      - pwd
-     - npm run build
      - echo BUILD completed on `date`
  post_build:
    commands:
